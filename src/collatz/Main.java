@@ -12,7 +12,22 @@ public class Main {
 		while(!s.equals("a") && !s.equals("b")) {
 			System.out.println("Invalid input. Try again.");
 			System.out.println("Type 'a' to simulate one number, or 'b' to find the longest.");
+			s = sc.nextLine();
+		}
+		
+		System.out.println("Input a positive integer. (1 or greater)");
+		int n = sc.nextInt();
+		while(n < 1) {
+			System.out.println("That number is not positive. Try again.");
+			System.out.println("Input a positive integer. (1 or greater)");
+			n = sc.nextInt();
 		}
 		sc.close();
+		
+		if(s.equals("a")) {
+			Simulator sim = new Simulator(n);
+			String series = sim.series();
+			System.out.println(series);
+		}
 	}
 }
