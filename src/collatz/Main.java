@@ -13,5 +13,6 @@ public class Main {
 			System.out.println("Invalid input. Try again.");
 			System.out.println("Type 'a' to simulate one number, or 'b' to find the longest.");
 		}
+		sc.close();
 	}
 }
