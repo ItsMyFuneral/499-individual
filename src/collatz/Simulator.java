@@ -19,7 +19,7 @@ public class Simulator {
 			s = s + " - " + t;
 			length++;
 		}
-		s = s + " - 1\nFinished in " + length + " steps.";
+		s = s + "\nFinished in " + length + " steps.";
 		return s;
 	}
 	
