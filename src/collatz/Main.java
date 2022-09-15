@@ -29,5 +29,22 @@ public class Main {
 			String series = sim.series();
 			System.out.println(series);
 		}
+		else //s is "b"
+		{
+			int num = 1;
+			int len = 0;
+			Simulator sim;
+			for(int i = 2; i <= n; i++)
+			{
+				sim = new Simulator(i);
+				int t = sim.simulate();
+				if(t > len)
+				{
+					num = i;
+					len = t;
+				}
+			}
+			System.out.println("The number less than " + n + " with the longest series is " + num + ", with length " + len + ".");
+		}
 	}
 }
